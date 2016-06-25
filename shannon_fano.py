@@ -68,6 +68,6 @@ probability = {
 code = shannon_fano(probability)
 
 print("Symbol  Probability  Codeword")
-for symbol in probability.keys():
+for symbol in sorted(probability.keys()):
     print("{}       {:.2f}         {}".format(
           symbol, probability[symbol], code[symbol]))
