@@ -1,6 +1,3 @@
-from math import log2, ceil
-
-
 def split(probability, sorted_symbols):
     split_point = 1
     min_diff = float('inf')
