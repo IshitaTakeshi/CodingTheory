@@ -25,6 +25,7 @@ def assign_digit(code, symbols, digit):
         code[symbol] += digit
     return code
 
+
 def shannon_fano_(probability, sorted_symbols, code={}):
     if len(sorted_symbols) == 1:
         return code
@@ -59,3 +60,14 @@ def test_wikipedia():
 
 
 test_wikipedia()
+
+probability = {
+    "A": 0.18, "B": 0.08, "C": 0.15, "D": 0.12,
+    "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
+}
+code = shannon_fano(probability)
+
+print("Symbol  Probability  Codeword")
+for symbol in probability.keys():
+    print("{}       {:.2f}         {}".format(
+          symbol, probability[symbol], code[symbol]))
