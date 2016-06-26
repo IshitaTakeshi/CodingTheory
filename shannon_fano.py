@@ -7,6 +7,7 @@
 
 from util import show
 from numeric import sort_symbols
+from prefixcode import isprefixcode
 
 
 def split(probability, sorted_symbols):
@@ -62,6 +63,7 @@ def test_shannon_fano():
     expected1 = {"A": "00", "B": "01", "C": "10", "D": "110", "E": "111"}
     expected2 = {"A": "00", "B": "01", "C": "110", "D": "10", "E": "111"}
     assert(code == expected1 or code == expected2)
+    assert(isprefixcode(code))
 
 
 if __name__ == '__main__':
@@ -72,4 +74,5 @@ if __name__ == '__main__':
         "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
     }
     code = shannon_fano(probability)
+    assert(isprefixcode(code))
     show(probability, code)

@@ -1,5 +1,6 @@
 from util import show
 from numeric import sort_symbols
+from prefixcode import isprefixcode
 
 
 class AbstractNode(object):
@@ -51,6 +52,7 @@ def test_huffman():
     code = huffman(probability)
     expected = {"A": "010", "B": "011", "C": "11", "D": "00", "E": "10"}
     assert(code == expected)
+    assert(isprefixcode(code))
 
 
 if __name__ == '__main__':
@@ -60,4 +62,5 @@ if __name__ == '__main__':
         "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
     }
     code = huffman(probability)
+    assert(isprefixcode(code))
     show(probability, code)

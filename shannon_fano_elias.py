@@ -8,6 +8,7 @@
 from math import log2, ceil
 
 from util import show
+from prefixcode import isprefixcode
 
 
 def shannon_fano_elias(probability, sort_symbols=False):
@@ -49,6 +50,7 @@ def test_shannon_fano_elias():
     code = shannon_fano_elias(probability, sort_symbols=True)
     expected = {"A": "001", "B": "011", "C": "1010", "D": "111"}
     assert(code == expected)
+    assert(isprefixcode(code))
 
 
 if __name__ == '__main__':
@@ -59,4 +61,5 @@ if __name__ == '__main__':
         "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
     }
     code = shannon_fano_elias(probability, sort_symbols=True)
+    assert(isprefixcode(code))
     show(probability, code)
