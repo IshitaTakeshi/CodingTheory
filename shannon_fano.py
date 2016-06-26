@@ -6,6 +6,7 @@
 
 
 from util import show
+from numeric import sort_symbols
 
 
 def split(probability, sorted_symbols):
@@ -19,11 +20,6 @@ def split(probability, sorted_symbols):
             split_point = i
             min_diff = diff
     return split_point
-
-
-def sort_symbols_by_value(probability):
-    symbols = probability.keys()
-    return sorted(symbols, key=lambda k: probability[k], reverse=True)
 
 
 def assign_digit(code, symbols, digit):
@@ -51,7 +47,7 @@ def shannon_fano_(probability, sorted_symbols, code={}):
 
 
 def shannon_fano(probability):
-    return shannon_fano_(probability, sort_symbols_by_value(probability))
+    return shannon_fano_(probability, sort_symbols(probability))
 
 
 def test_shannon_fano():
