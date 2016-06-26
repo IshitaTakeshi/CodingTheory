@@ -1,5 +1,6 @@
+Implementation of coding algorithms
+===================================
 
-# Implementation of coding algorithms
 This can generate
 
 * [x] Shannon Fano code
@@ -7,7 +8,7 @@ This can generate
 * [x] Huffan code
 
 
-# Example
+## Example
 Just run
 
 ```
