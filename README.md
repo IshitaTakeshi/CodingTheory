@@ -1,5 +1,5 @@
-Implementation of coding algorithms
-===================================
+Coding algorithms
+=================
 
 This can generate
 
