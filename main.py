@@ -1,3 +1,6 @@
+# The MIT License (MIT)
+# Copyright (c) 2016 Ishita Takeshi
+
 from shannon_fano import shannon_fano
 from shannon_fano_elias import shannon_fano_elias
 from huffman import huffman

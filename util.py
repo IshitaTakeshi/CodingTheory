@@ -1,6 +1,7 @@
 # The MIT License (MIT)
 # Copyright (c) 2016 Ishita Takeshi
 
+
 def show(code, probability):
     print("Symbol  Probability  Codeword")
     print("-----------------------------")
