@@ -1,3 +1,10 @@
+# The MIT License (MIT)
+# Copyright (c) 2016 Ishita Takeshi
+
+# The algorithm is at
+# https://en.wikipedia.org/wiki/Shannon%E2%80%93Fano%E2%80%93Elias_coding
+
+
 from math import log2, ceil
 
 from util import show

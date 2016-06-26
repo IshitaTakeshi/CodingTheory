@@ -1,3 +1,10 @@
+# The MIT License (MIT)
+# Copyright (c) 2016 Ishita Takeshi
+#
+# The algorithm is at
+# https://en.wikipedia.org/wiki/Shannon%E2%80%93Fano_coding
+
+
 from util import show
 
 
