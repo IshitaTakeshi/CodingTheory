@@ -4,10 +4,8 @@
 # The algorithm is at
 # https://en.wikipedia.org/wiki/Shannon%E2%80%93Fano%E2%80%93Elias_coding
 
-
 from math import log2, ceil
 
-from util import show
 from prefixcode import isprefixcode
 
 
@@ -55,11 +53,3 @@ def test_shannon_fano_elias():
 
 if __name__ == '__main__':
     test_shannon_fano_elias()
-
-    probability = {
-        "A": 0.18, "B": 0.08, "C": 0.15, "D": 0.12,
-        "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
-    }
-    code = shannon_fano_elias(probability, sort_symbols=True)
-    assert(isprefixcode(code))
-    show(probability, code)

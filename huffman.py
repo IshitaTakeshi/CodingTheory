@@ -1,4 +1,6 @@
-from util import show
+# The MIT License (MIT)
+# Copyright (c) 2016 Ishita Takeshi
+
 from numeric import sort_symbols
 from prefixcode import isprefixcode
 
@@ -57,10 +59,3 @@ def test_huffman():
 
 if __name__ == '__main__':
     test_huffman()
-    probability = {
-        "A": 0.18, "B": 0.08, "C": 0.15, "D": 0.12,
-        "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
-    }
-    code = huffman(probability)
-    assert(isprefixcode(code))
-    show(probability, code)
