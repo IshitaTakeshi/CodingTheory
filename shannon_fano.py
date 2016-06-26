@@ -1,3 +1,6 @@
+from util import show
+
+
 def split(probability, sorted_symbols):
     split_point = 1
     min_diff = float('inf')
@@ -44,14 +47,6 @@ def shannon_fano(probability):
     return shannon_fano_(probability, sort_symbols_by_value(probability))
 
 
-def show(probability, code):
-    print("Symbol  Probability  Codeword")
-    for symbol in sorted(probability.keys()):
-        print("{}       {:.2f}         {}".format(
-              symbol, probability[symbol], code[symbol]))
-    print("")
-
-
 def test_shannon_fano():
     occurrences = {"A": 15, "B": 7, "C": 6, "D": 6, "E": 5}
     probability = {}
@@ -66,11 +61,12 @@ def test_shannon_fano():
     assert(code == expected1 or code == expected2)
 
 
-test_shannon_fano()
+if __name__ == '__main__':
+    test_shannon_fano()
 
-probability = {
-    "A": 0.18, "B": 0.08, "C": 0.15, "D": 0.12,
-    "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
-}
-code = shannon_fano(probability)
-show(probability, code)
+    probability = {
+        "A": 0.18, "B": 0.08, "C": 0.15, "D": 0.12,
+        "E": 0.3, "F": 0.02, "G": 0.1, "H": 0.05
+    }
+    code = shannon_fano(probability)
+    show(probability, code)
